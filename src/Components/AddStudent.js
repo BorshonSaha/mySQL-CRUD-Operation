@@ -1,6 +1,6 @@
 import React, {useRef} from 'react';
 import { Container } from 'react-bootstrap';
-import Axios from 'axios';
+import axios from 'axios';
 import { useHistory } from "react-router";
 
 const AddStudent = () => {
@@ -13,7 +13,7 @@ const AddStudent = () => {
         const address = e.target.address.value;
         const cgpa = e.target.CGPA.value;
 
-        Axios.post('http://localhost:5000/addstudent', {
+        axios.post('http://localhost:5000/addstudent', {
             Name: name,
             Address: address,
             CGPA: cgpa
@@ -22,14 +22,9 @@ const AddStudent = () => {
         history.push('/');
     }
 
-    const container = useRef(null);
-
     return (
         <Container>
-            <section className="row d-flex align-items-center">
-                <div>
-                    <div className="contactMe" ref={container}></div>
-                </div>
+            <section className="align-items-center">
                 <div>
                     <form onSubmit={sendData}>
                         <div className="from-group pt-3" >
