@@ -28,9 +28,9 @@ const UpdateStudent = () => {
     return (
         <div>
             <Container>
-                <section className="align-items-center">
+                <section className="mt-4 align-items-center">
                     <div>
-                        <form onSubmit={sendData}>
+                        <form className="form-control" onSubmit={sendData}>
                             <div className="from-group pt-3" >
                                 <input type="text" id='id' className="form-control" placeholder="Enter ID" name='id' required />
                             </div>

@@ -24,9 +24,9 @@ const AddStudent = () => {
 
     return (
         <Container>
-            <section className="align-items-center">
+            <section className="mt-4 align-items-center">
                 <div>
-                    <form onSubmit={sendData}>
+                    <form className="form-control" onSubmit={sendData}>
                         <div className="from-group pt-3" >
                             <input type="text" id='name' className="form-control" placeholder='Enter name' name='name' required />
                         </div>
